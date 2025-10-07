@@ -28,7 +28,7 @@ def fetch_product(item_id, retries=2):
 
     for attempt in range(1, retries + 1):
         try:
-            response = requests.get(API_URL, params=params, timeout=15)
+            response = requests.get(API_URL, params=params, timeout=45)
             data = response.json()
 
             # Validate structure
